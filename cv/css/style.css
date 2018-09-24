@@ -19,10 +19,10 @@ h1 {
                0 20px 20px rgba(0,0,0,.15);
 }
 a {
-    color:#662D91;
+    color:#662D91!important;
 }
 a:hover {
-    color:#000000;
+    color:#000000!important;
 }
 .section-page {
     background-color: #171717;
