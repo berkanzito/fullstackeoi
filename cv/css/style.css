@@ -29,3 +29,6 @@ a:hover {
     color: #FFFFFF!important;
     border-bottom: 4px solid #662D91!important;
   }
+.bg-info {
+    background-color: #662D91;
+}
