@@ -1,5 +1,5 @@
 body {
-    
+
 }
 h1 {
 	color: #ffffff!important;
@@ -18,3 +18,8 @@ h1 {
                0 10px 10px rgba(0,0,0,.2),
                0 20px 20px rgba(0,0,0,.15);
 }
+.section-page {
+    background-color: #171717;
+    color: #FFFFFF!important;
+    border-bottom: 4px solid #662D91!important;
+  }
