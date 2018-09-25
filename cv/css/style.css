@@ -30,5 +30,5 @@ a:hover {
     border-bottom: 4px solid #662D91!important;
   }
 .bg-info {
-    background-color: #662D91;
+    background-color: #662D91!important;
 }
