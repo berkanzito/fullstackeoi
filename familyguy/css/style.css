@@ -49,3 +49,13 @@ h1 {
 #stewie {
 
 }
+a {
+    color: #fff;
+}
+a:hover {
+    color: #6a00ff;
+}
+footer {
+    margin-top: 10px;
+    text-align: center;
+}
