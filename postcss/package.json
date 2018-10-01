@@ -1,0 +1,17 @@
+{
+  "name": "postcss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "postcss-easy-import": "^3.0.0",
+    "postcss-mixins": "^6.2.0",
+    "postcss-preset-env": "^6.0.7"
+  }
+}
