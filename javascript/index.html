@@ -36,16 +36,15 @@
 </div>
 
 <div class="container bg-light">
-    <div class="die a">
-      
-      
-    </div>
-    Attack
+    <div class="dice a">
+      Attack
       
       <div class="daresult" id="gimme">
         
       </div>
       <button onClick="attackDice()">Roll the dice</button>
+      
+    </div>
     <div class="dice b">
       Defense
           <div class="daresult" id="gimmed">
@@ -110,6 +109,7 @@ $(".randomize, .die").click(function() {
 
   timeoutId = setTimeout(function() {
     $die.removeClass("rolling");
+    attackDice();
 
     rollTo(randomFace());
   }, animationDuration);
