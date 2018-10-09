@@ -37,3 +37,5 @@ function atributeDice() {
   atributos.push(numero);
   document.getElementById("atributos").innerHTML = atributos;
 }
+var atributos = [];
+document.getElementById('atributos').innerHTML = atributos;
