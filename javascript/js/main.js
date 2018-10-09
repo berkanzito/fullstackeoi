@@ -3,6 +3,7 @@ var defense = 2;
 var atributo = 7;
 var dice = 20;
 
+// Attacks
 function attackDice() {
   var numero = Math.floor((Math.random() * dice) + 1 + attack);
   document.getElementById('gimme');
@@ -13,28 +14,28 @@ function attackDice() {
 }
 var ataques = [];
 document.getElementById('ataques').innerHTML = ataques;
-localStorage.setObj('ataques', JSON.stringify(ataques));
+// localStorage.setObj('ataques', JSON.stringify(ataques));
 
+// Defenses
 function defenseDice() {
-  var numero = Math.floor((Math.random() * dice) + 1);
+  var numero = Math.floor((Math.random() * dice) + 1 + defense);
   document.getElementById('gimmed');
+  gimmed.innerHTML = numero;
   
-  localStorage.setItem('defense', JSON.stringify(numero));
   defensas.push(numero);
   document.getElementById("defensas").innerHTML = defensas;
-  gimmed.innerHTML = numero;
 }
 var defensas = [];
 document.getElementById('defensas').innerHTML = defensas;
 
+// Atributes
 function atributeDice() {
-  var numero = Math.floor((Math.random() * dice) + 1);
+  var numero = Math.floor((Math.random() * dice) + 1 + atributo);
   document.getElementById('gimmea');
+  gimmea.innerHTML = numero;
   
-  localStorage.setItem('atributos', JSON.stringify(numero));
   atributos.push(numero);
   document.getElementById("atributos").innerHTML = atributos;
-  gimmea.innerHTML = numero;
 }
 var atributos = [];
 document.getElementById('atributos').innerHTML = atributos;
