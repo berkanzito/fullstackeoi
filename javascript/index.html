@@ -11,28 +11,38 @@
 <body>
 
 <div class="content">
-  <div class="die">
-    <figure class="face face-1"></figure>
-    <figure class="face face-2"></figure>
-    <figure class="face face-3"></figure>
-    <figure class="face face-4"></figure>
-    <figure class="face face-5"></figure>
-    <figure class="face face-6"></figure>
-    <figure class="face face-7"></figure>
-    <figure class="face face-8"></figure>
-    <figure class="face face-9"></figure>
-    <figure class="face face-10"></figure>
-    <figure class="face face-11"></figure>
-    <figure class="face face-12"></figure>
-    <figure class="face face-13"></figure>
-    <figure class="face face-14"></figure>
-    <figure class="face face-15"></figure>
-    <figure class="face face-16"></figure>
-    <figure class="face face-17"></figure>
-    <figure class="face face-18"></figure>
-    <figure class="face face-19"></figure>
-    <figure class="face face-20"></figure>
-  </div>
+
+<section class="cube-container roll">
+<div id="cube" class="show-1">
+<figure class="face01">1</figure>
+<figure class="face02">2</figure>
+<figure class="face03">3</figure>
+<figure class="face04">4</figure>
+<figure class="face05">5</figure>
+<figure class="face06">6</figure>
+<figure class="face07">7</figure>
+<figure class="face08">8</figure>
+<figure class="face09">9</figure>
+<figure class="face10">10</figure>
+<figure class="face11">11</figure>
+<figure class="face12">12</figure>
+<figure class="face13">13</figure>
+<figure class="face14">14</figure>
+<figure class="face15">15</figure>
+<figure class="face16">16</figure>
+<figure class="face17">17</figure>
+<figure class="face18">18</figure>
+<figure class="face19">19</figure>
+<figure class="face20">20</figure>
+</div>
+</section>
+
+<section id="outcome">
+<div id="text"></div>
+</section>
+
+
+
 </div>
 
 <div class="container bg-light">
@@ -42,7 +52,7 @@
       <div class="daresult" id="gimme">
         
       </div>
-      <button onClick="attackDice()">Roll the dice</button>
+      <button id="attackDice">Roll the dice</button>
       
     </div>
     <div class="dice b">
@@ -50,14 +60,14 @@
           <div class="daresult" id="gimmed">
         
       </div>
-      <button onClick="defenseDice()">Roll the dice</button>
+      <button id="defenseDice">Roll the dice</button>
     </div>
     <div class="dice c">
       Atribute Dice
           <div class="daresult" id="gimmea">
         
       </div>
-      <button onClick="atributeDice()">Roll the dice</button>
+      <button id="atributeDice">Roll the dice</button>
     </div>
     
   </div>

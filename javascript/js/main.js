@@ -3,79 +3,76 @@ var defense = 2;
 var atributo = 7;
 var dice = 20;
 
-// Attacks
-function attackDice() {
-  var numero = Math.floor((Math.random() * dice) + 1 + attack);
-  document.getElementById('gimme');
-  gimme.innerHTML = numero;
-  
-  ataques.push(numero);
-  document.getElementById("ataques").innerHTML = ataques;
-}
 var ataques = [];
-document.getElementById('ataques').innerHTML = ataques;
-// localStorage.setObj('ataques', JSON.stringify(ataques));
-
-// Defenses
-function defenseDice() {
-  var numero = Math.floor((Math.random() * dice) + 1 + defense);
-  document.getElementById('gimmed');
-  gimmed.innerHTML = numero;
-  
-  defensas.push(numero);
-  document.getElementById("defensas").innerHTML = defensas;
-}
 var defensas = [];
-document.getElementById('defensas').innerHTML = defensas;
-
-// Atributes
-function atributeDice() {
-  var numero = Math.floor((Math.random() * dice) + 1 + atributo);
-  document.getElementById('gimmea');
-  gimmea.innerHTML = numero;
-  
-  atributos.push(numero);
-  document.getElementById("atributos").innerHTML = atributos;
-}
 var atributos = [];
-document.getElementById('atributos').innerHTML = atributos;
 
-var $die = $(".die"),
-sides = 20,
-initialSide = 1,
-lastFace,
-timeoutId,
-transitionDuration = 500,
-animationDuration = 3000;
+var cube = document.getElementById('cube');
+var outcome = document.getElementById('outcome');
+var outcomeText = document.getElementById('text');
+var messageDelay; //timer
+var fadeout; //timer
+var messages = [
+  'Your Bard was killed',
+  'You smote the orc',
+  'You escaped the Ice Dragon',
+  'Lightning Bolt succeeded',
+  'Critical hit',
+  'You are Lawful Evil',
+  'You fell into the Well of Sorrows',
+  'You found the Goblet of Endless Grog',
+  'You encountered a Harpy',
+  'Charisma + 10',
+  'You lose 11 Hit Points',
+  'You disarmed the trap',
+  'Plate Mail + 3',
+  '14 Damage',
+  'Spell failure',
+  'Backstab successful',
+  'Your wand broke',
+  'Surprise Attack',
+  'You broke through the door',
+  'You turned to stone'
+];
 
 
-function randomFace() {
-var face = Math.floor(Math.random() * sides) + initialSide;
-lastFace = face == lastFace ? randomFace() : face;
-return face;
-}
+var showFace = function(d = 0) {
 
-function rollTo(face) {
-clearTimeout(timeoutId);
+  var face = Math.floor((Math.random() * dice) + 1 + attack);
+  document.getElementById('gimme');
+  gimme.innerHTML = face;
+  
+  ataques.push(face);
+  document.getElementById("ataques").innerHTML = ataques;
 
-$("[href=" + face + "]").addClass("active");
+  //if not already at this number
+  if (cube.className !== 'show-' + face ) {
+    cube.className = 'show-' + face;
+    //delay for spin to finish
+    messageDelay = setTimeout( function() {
+      //show message
+      outcomeText.innerHTML = messages[ face - 1 ];
+      //outcome.className = 'show';
+      //display message then fade out
+      fadeout = setTimeout( function() {
+        //hide message
+        outcome.className = '';
+      }, 2000);
+    } , 1000);
+  } else {
+    //repeat number, try again
+    return showFace();
+  }
+};
 
-$die.attr("data-face", face);
-}
+document.querySelector('#attackDice, #defenseDice #atributeDice').addEventListener( 'click', function() {
+  //fade message
+  outcome.className = '';
+  //clear timers if they are there
+  if ( typeof messageDelay === "number" ) {
+    clearTimeout( messageDelay );
+    clearTimeout( fadeout );
+  }
+  showFace();
+}, false);
 
-function reset() {
-$die.attr("data-face", null).removeClass("rolling");
-}
-
-$(".randomize, .die").click(function() {
-$die.addClass("rolling");
-clearTimeout(timeoutId);
-
-timeoutId = setTimeout(function() {
-  $die.removeClass("rolling");
-
-  rollTo(randomFace());
-}, animationDuration);
-
-return false;
-});
