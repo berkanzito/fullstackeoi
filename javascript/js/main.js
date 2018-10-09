@@ -37,7 +37,6 @@ function atributeDice() {
   atributos.push(numero);
   document.getElementById("atributos").innerHTML = atributos;
 }
-<<<<<<< HEAD
 
 var $die = $(".die"),
   sides = 20,
@@ -46,13 +45,6 @@ var $die = $(".die"),
   timeoutId,
   transitionDuration = 500,
   animationDuration = 3000;
-
-$("ul > li > a").click(function() {
-  reset();
-  rollTo($(this).attr("href"));
-
-  return false;
-});
 
 function randomFace() {
   var face = Math.floor(Math.random() * sides) + initialSide;
@@ -85,7 +77,3 @@ $(".randomize, .die").click(function() {
 
   return false;
 });
-=======
-var atributos = [];
-document.getElementById('atributos').innerHTML = atributos;
->>>>>>> 3c7abfa626fe70f64ff295284e1a539e1813e971

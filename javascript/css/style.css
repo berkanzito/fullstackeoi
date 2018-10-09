@@ -1,3 +1,16 @@
+body {
+  background: #333;
+}
+
+.content {
+  margin: auto auto;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  -webkit-perspective: 1500px;
+          perspective: 1500px;
+}
+
 .container {
   background-color: #C0C0C0;
   display: flex;
@@ -54,19 +67,6 @@
     -webkit-transform: rotateX(480deg) rotateY(960deg) rotateZ(0deg);
             transform: rotateX(480deg) rotateY(960deg) rotateZ(0deg);
   }
-}
-body {
-  background: #333;
-  padding: 20px;
-}
-
-.content {
-  margin: auto auto;
-  position: relative;
-  width: 200px;
-  height: 200px;
-  -webkit-perspective: 1500px;
-          perspective: 1500px;
 }
 
 .die {
