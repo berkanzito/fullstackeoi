@@ -109,7 +109,6 @@ $(".randomize, .die").click(function() {
 
   timeoutId = setTimeout(function() {
     $die.removeClass("rolling");
-    attackDice();
 
     rollTo(randomFace());
   }, animationDuration);
