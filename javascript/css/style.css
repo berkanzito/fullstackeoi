@@ -11,13 +11,16 @@ body {
 }
 
 .container {
-  background-color: #C0C0C0;
   display: flex;
   height: auto;
   justify-content: center;
   align-items: center;
   flex-direction: row;
 }
+.bg-light {
+  background-color: #C0C0C0;
+}
+
 .dice {
   margin: 20px;
 }
