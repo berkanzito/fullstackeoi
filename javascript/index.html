@@ -86,7 +86,7 @@
 
 
 function randomFace() {
-  var face = Math.floor(Math.random() * sides) + initialSide;
+  var face = Math.floor(Math.random() * sides) + initialSide + attack);
   lastFace = face == lastFace ? randomFace() : face;
   document.getElementById('gimme');
   gimme.innerHTML = face;
