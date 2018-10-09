@@ -1,6 +1,6 @@
 var attack = 1;
 var defense = 2;
-var atributo = 7;
+var atributo = 1;
 var dice = 20;
 
 var ataques = [];
@@ -38,11 +38,11 @@ var messages = [
 
 var showFace = function(d = 0) {
 
-  var face = Math.floor((Math.random() * dice) + 1 + attack);
+  var face = Math.floor((Math.random() * dice) + 1);
   document.getElementById('gimme');
   gimme.innerHTML = face;
   
-  ataques.push(face);
+  ataques.push(face + attack);
   document.getElementById("ataques").innerHTML = ataques;
 
   //if not already at this number
