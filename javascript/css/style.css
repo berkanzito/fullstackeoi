@@ -8,8 +8,6 @@ body {
   position: relative;
   width: 200px;
   height: 200px;
-  -webkit-perspective: 1500px;
-          perspective: 1500px;
 }
 
 .container {
