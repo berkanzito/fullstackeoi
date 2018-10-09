@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" media="all" href="css/style.css" />
     <script defer src="js/main.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <title>Roll the dice!</title>
 </head>
 <body>
@@ -70,5 +71,47 @@
       <p id="atributos"></p>
     </div>
   </div>
+  <script>
+  var $die = $(".die"),
+  sides = 20,
+  initialSide = 1,
+  lastFace,
+  timeoutId,
+  transitionDuration = 500,
+  animationDuration = 3000;
+
+
+function randomFace() {
+  var face = Math.floor(Math.random() * sides) + initialSide;
+  lastFace = face == lastFace ? randomFace() : face;
+  return face;
+}
+
+function rollTo(face) {
+  clearTimeout(timeoutId);
+
+  $("ul > li > a").removeClass("active");
+  $("[href=" + face + "]").addClass("active");
+
+  $die.attr("data-face", face);
+}
+
+function reset() {
+  $die.attr("data-face", null).removeClass("rolling");
+}
+
+$(".randomize, .die").click(function() {
+  $die.addClass("rolling");
+  clearTimeout(timeoutId);
+
+  timeoutId = setTimeout(function() {
+    $die.removeClass("rolling");
+
+    rollTo(randomFace());
+  }, animationDuration);
+
+  return false;
+});
+</script>
 </body>
 </html>
