@@ -2,6 +2,41 @@
 Fullstack EOI git 
 
 ## Enlaces de Interés
+### Sin ordenar
+- https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04
+- https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills
+- https://pugjs.org/api/getting-started.html
+- https://mediaqueri.es/
+- https://postcss.org/
+- https://cssdb.org/
+- https://preset-env.cssdb.org/
+- https://holidaypirates.github.io/nucleus/
+- https://webpack.js.org/concepts/
+- 
+
+### Utilidades
+- https://caniuse.com/
+- http://usejsdoc.org/
+- http://kangax.github.io/compat-table/es6/
+
+### Frameworks
+- https://www.emezeta.com/articulos/alternativas-a-bootstrap
+- https://display.js.org/
+- https://electronjs.org/apps/laravel-kit
+
+### Librerias
+- https://howlerjs.com/
+- https://micku7zu.github.io/vanilla-tilt.js/
+- https://alvarotrigo.com/fullPage/es/
+- https://lodash.com/
+
+### Juegos
+- https://flexboxfroggy.com/#es
+- http://cssgridgarden.com/#es
+
+### Editores Online
+- https://repl.it/repls/PriceyWideOutcomes
+- https://codepen.io/ghettoblastah/
 
 ## Notas de Manz
 ### Parcel
