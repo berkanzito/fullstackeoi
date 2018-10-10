@@ -12,7 +12,9 @@ Fullstack EOI git
 - https://preset-env.cssdb.org/
 - https://holidaypirates.github.io/nucleus/
 - https://webpack.js.org/concepts/
-- 
+- https://electronjs.org/
+- https://sass-lang.com/
+- https://gruntjs.com/getting-started
 
 ### Utilidades
 - https://caniuse.com/
