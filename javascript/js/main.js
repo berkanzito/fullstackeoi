@@ -34,14 +34,14 @@ var showFace = function(d) {
     document.getElementById('gimmed');
     gimmed.innerHTML = face;
     
-    ataques.push(face + defense);
+    defensas.push(face + defense);
     document.getElementById("defensas").innerHTML = defensas;
   }
   else if (d = 3) {
     document.getElementById('gimmea');
     gimmea.innerHTML = face;
     
-    ataques.push(face + atribute);
+    atributos.push(face + atribute);
     document.getElementById("atributos").innerHTML = atributos;
   } 
 
