@@ -61,7 +61,7 @@ var showFace = function(d) {
     } , 1000);
   } else {
     //repeat number, try again
-    return showFace();
+    return showFace(d);
   }
 };
 
