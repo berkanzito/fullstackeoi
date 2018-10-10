@@ -69,7 +69,7 @@ var showFace = function(d) {
   }
 };
 
-document.querySelector('.daroll, #attackDice #defenseDice #atributeDice').addEventListener( 'click', function() {
+document.querySelector('.daroll').addEventListener( 'click', function() {
   //fade message
   outcome.className = '';
   //clear timers if they are there
