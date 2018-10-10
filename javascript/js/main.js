@@ -48,7 +48,7 @@ var showFace = function(d = 0) {
   }
 };
 
-document.querySelector('#attackDice, #defenseDice #atributeDice').addEventListener( 'click', function() {
+document.querySelectorAll('.daroll').addEventListener( 'click', function() {
   //fade message
   outcome.className = '';
   //clear timers if they are there
