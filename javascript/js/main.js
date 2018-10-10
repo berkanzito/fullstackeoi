@@ -1,12 +1,15 @@
+// Base Atributes
 var attack = 1;
 var defense = 2;
 var atributo = 1;
 var dice = 20;
 
+//Empty Arrays
 var ataques = [];
 var defensas = [];
 var atributos = [];
 
+// 1d20 
 var cube = document.getElementById('cube');
 var outcome = document.getElementById('outcome');
 var outcomeText = document.getElementById('text');
@@ -20,13 +23,31 @@ var messages = [
 
 
 var showFace = function(d = 0) {
+  if (d = attack) {
+    var face = Math.floor((Math.random() * dice) + 1);
+    document.getElementById('gimme');
+    gimme.innerHTML = face;
+    
+    ataques.push(face + attack);
+    document.getElementById("ataques").innerHTML = ataques;
+  } else if (d = defense) {
+    var face = Math.floor((Math.random() * dice) + 1);
+    document.getElementById('gimmed');
+    gimmed.innerHTML = face;
+    
+    ataques.push(face + defense);
+    document.getElementById("defensas").innerHTML = defensas;
+  }
+  else if (d = atribute) {
+    var face = Math.floor((Math.random() * dice) + 1);
+    document.getElementById('gimmea');
+    gimmea.innerHTML = face;
+    
+    ataques.push(face + atribute);
+    document.getElementById("atributos").innerHTML = atributos;
+  } else {
 
-  var face = Math.floor((Math.random() * dice) + 1);
-  document.getElementById('gimme');
-  gimme.innerHTML = face;
-  
-  ataques.push(face + attack);
-  document.getElementById("ataques").innerHTML = ataques;
+  }
 
   //if not already at this number
   if (cube.className !== 'show-' + face ) {
@@ -48,7 +69,7 @@ var showFace = function(d = 0) {
   }
 };
 
-document.querySelectorAll('.daroll').addEventListener( 'click', function() {
+document.querySelector('.daroll, #attackDice #defenseDice #atributeDice').addEventListener( 'click', function() {
   //fade message
   outcome.className = '';
   //clear timers if they are there
