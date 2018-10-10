@@ -43,9 +43,7 @@ var showFace = function(d) {
     
     ataques.push(face + atribute);
     document.getElementById("atributos").innerHTML = atributos;
-  } else {
-
-  }
+  } 
 
   //if not already at this number
   if (cube.className !== 'show-' + face ) {
