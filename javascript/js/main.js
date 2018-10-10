@@ -1,7 +1,7 @@
 // Base Atributes
 var attack = 1;
 var defense = 2;
-var atributo = 1;
+var atribute = 1;
 var dice = 20;
 
 //Empty Arrays
