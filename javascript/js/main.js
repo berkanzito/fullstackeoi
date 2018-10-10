@@ -24,20 +24,20 @@ var messages = [
 
 var showFace = function(d) {
   var face = Math.floor((Math.random() * dice) + 1);
-  if (d = 'attack') {
+  if (d = 1) {
     document.getElementById('gimme');
     gimme.innerHTML = face;
     
     ataques.push(face + attack);
     document.getElementById("ataques").innerHTML = ataques;
-  } else if (d = 'defense') {
+  } else if (d = 2) {
     document.getElementById('gimmed');
     gimmed.innerHTML = face;
     
     ataques.push(face + defense);
     document.getElementById("defensas").innerHTML = defensas;
   }
-  else if (d = 'atribute') {
+  else if (d = 3) {
     document.getElementById('gimmea');
     gimmea.innerHTML = face;
     
