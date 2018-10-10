@@ -65,6 +65,7 @@ var showFace = function(d) {
   }
 };
 
+/* HIDDEN MESSAGE
 document.querySelector('.daroll').addEventListener( 'click', function() {
   //fade message
   outcome.className = '';
@@ -75,4 +76,5 @@ document.querySelector('.daroll').addEventListener( 'click', function() {
   }
   showFace();
 }, false);
+*/
 
