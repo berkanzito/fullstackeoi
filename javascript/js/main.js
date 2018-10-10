@@ -22,7 +22,7 @@ var messages = [
 ];
 
 
-var showFace = function(d = 0) {
+var showFace = function(d) {
   if (d = attack) {
     var face = Math.floor((Math.random() * dice) + 1);
     document.getElementById('gimme');
