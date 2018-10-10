@@ -23,15 +23,14 @@ var messages = [
 
 
 var showFace = function(d) {
+  var face = Math.floor((Math.random() * dice) + 1);
   if (d = 'attack') {
-    var face = Math.floor((Math.random() * dice) + 1);
     document.getElementById('gimme');
     gimme.innerHTML = face;
     
     ataques.push(face + attack);
     document.getElementById("ataques").innerHTML = ataques;
   } else if (d = 'defense') {
-    var face = Math.floor((Math.random() * dice) + 1);
     document.getElementById('gimmed');
     gimmed.innerHTML = face;
     
@@ -39,7 +38,6 @@ var showFace = function(d) {
     document.getElementById("defensas").innerHTML = defensas;
   }
   else if (d = 'atribute') {
-    var face = Math.floor((Math.random() * dice) + 1);
     document.getElementById('gimmea');
     gimmea.innerHTML = face;
     
